@@ -1,7 +1,21 @@
-<h2>{{ hero.name }} details</h2>
+<h2>My Heroes</h2>
+<!--
+    ngif laver en if statement på om selected hero != null
+-->
+<div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}}</h2>
+    <div><span>id:</span>{{ selectedHero.id }}</div>
 
-<div><span>id: </span> {{hero.id}} </div>
-<div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name">
 </div>
+
+<ul class="heroes">
+    <!--
+        *ngfor laver en list af vores objekter 
+        [class.selected] gør at hvis at vores li er selected og giver den så den tilpassede style
+    -->
+    <li [class.selected] = "hero === selectedHero" *ngFor="let hero of heroes" (click)="onSelect(hero)">
+        <span class="badge">
+            {{hero.id}}
+        </span> {{hero.name}}
+    </li>
+</ul>
