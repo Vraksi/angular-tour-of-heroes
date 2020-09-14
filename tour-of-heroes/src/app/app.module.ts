@@ -5,15 +5,18 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/Hero-Detail.Component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    //formsmodule giver os mulighed for at bruge ngmodel, og det giver os en two way binding på vores
     FormsModule
   ],
   providers: [],
