@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../heroes/Hero';
+import { MessageService } from '../message.service';
 
 
 @Component({
