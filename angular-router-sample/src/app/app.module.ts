@@ -7,14 +7,15 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { AppRountingModule } from './app-rounting.module';
+/*
 const appRoutes: Routes = [
   { path: 'crisis-center', component: CrisisListComponent },
   { path: 'heroes', component: HeroListComponent },
   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ]
-
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +26,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing : true }
-    )
+    AppRountingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
